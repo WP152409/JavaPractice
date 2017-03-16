@@ -1,13 +1,10 @@
-/**
- * 
- */
 package org.dimigo.basic;
 
 /**
  * org.dimigo.basic
  *  \_ Operator
  *
- * 연산자에 대해 알아봅시다
+ * 디미베네
  *
  * @author chalk
  * @version 1.0.0
