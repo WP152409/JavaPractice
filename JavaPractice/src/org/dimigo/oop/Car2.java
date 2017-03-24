@@ -1,18 +1,33 @@
+/**
+ * 
+ */
 package org.dimigo.oop;
 
 /**
  * org.dimigo.oop
- *  \_ Car
+ *  \_ Car2
  *
- * Car!
+ * Second car!
  *
  * @author chalk
  * @version 1.0.0
- * @since Mar 23, 2017
+ * @since Mar 24, 2017
  */
-public class Car {
+public class Car2 {
 	private String company, model, color;
 	private int maxSpeed, price;
+	
+	public Car2(){
+		// nothing to do
+	}
+
+	public Car2(String newCompany, String newModel, String newColor, int newMaxSpeed, int newPrice) {
+		company = newCompany;
+		model = newModel;
+		color = newColor;
+		maxSpeed = newMaxSpeed;
+		price = newPrice;
+	}
 
 	public String getCompany() {
 		return company;
@@ -53,6 +68,4 @@ public class Car {
 	public void setPrice(int newPrice) {
 		price = newPrice;
 	}
-	
-	
 }
