@@ -22,15 +22,16 @@ public class Question {
 		
 		for(int i = 0; i < q.length; i++){
 			System.out.printf("%d. 가장 좋아하는 %s?%n", i + 1, q[i]);
-			
-			String yours = scanner.nextLine();
-			System.out.println(a[i].equals(yours) ? "정답입니다" : "틀렸습니다");
+			System.out.println(a[i].equals(scanner.nextLine()) ? "정답입니다" : "틀렸습니다");
 		}
 		
+		StringBuilder b = new StringBuilder();
+		for(int i = 0; i < a.length; i++) b
+				.append("가장 좋아하는 ").append(q[i]).append("? ")
+				.append(a[i]).append("입니다.").append(System.lineSeparator());
+		
 		System.out.println("<< 결과 출력 >>");
-		for(int i = 0; i < a.length; i++){
-			System.out.printf("가장 좋아하는 %s? %s입니다.%n", q[i], a[i]);
-		}
+		System.out.println(b.toString());
 		
 		scanner.close();
 	}
