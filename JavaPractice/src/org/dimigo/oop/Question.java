@@ -13,26 +13,21 @@ import java.util.Scanner;
  * @since Mar 31, 2017
  */
 public class Question {
-
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
+		String[][] list = {{"가수는", "Zedd"}, {"배우는", "undefined"}, {"과목은", "물리"}};
 		
-		String[] q = { "가수는", "배우는", "과목은" };
-		String[] a = { "Zedd", "undefined", "물리" };
-		
-		for(int i = 0; i < q.length; i++){
-			System.out.printf("%d. 가장 좋아하는 %s?%n", i + 1, q[i]);
-			System.out.println(a[i].equals(scanner.nextLine()) ? "정답입니다" : "틀렸습니다");
+		for(int i = 0; i < list.length; i++){
+			System.out.printf("%d. 가장 좋아하는 %s?%n", i + 1, list[0][i]);
+			System.out.println(list[1][i].equals(scanner.nextLine()) ? "정답입니다" : "틀렸습니다");
 		}
 		
 		StringBuilder b = new StringBuilder();
-		for(int i = 0; i < a.length; i++) b
-				.append("가장 좋아하는 ").append(q[i]).append("? ")
-				.append(a[i]).append("입니다.").append(System.lineSeparator());
+		for(int i = 0; i < list.length; i++) b
+				.append("가장 좋아하는 ").append(list[0][i]).append("? ")
+				.append(list[1][i]).append("입니다.").append(System.lineSeparator());
 		
-		System.out.println("<< 결과 출력 >>");
-		System.out.println(b.toString());
-		
+		System.out.printf("<< 결과 출력 >>%n%s%n", b.toString());
 		scanner.close();
 	}
 }
