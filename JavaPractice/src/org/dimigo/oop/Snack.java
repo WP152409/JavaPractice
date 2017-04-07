@@ -1,6 +1,3 @@
-/**
- * 
- */
 package org.dimigo.oop;
 
 /**
@@ -16,6 +13,17 @@ package org.dimigo.oop;
 public class Snack {
 	private String name, company;
 	private int price, number;
+	
+	public Snack() {
+		
+	}
+	
+	public Snack(String name, String company, int price, int number) {
+		this.name = name;
+		this.company = company;
+		this.price = price;
+		this.number = number;
+	}
 
 	public String getName() {
 		return name;
