@@ -1,9 +1,7 @@
 package org.dimigo.oop;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.stream.IntStream;
+import java.util.*;
+import java.util.stream.*;
 
 /**
  * org.dimigo.oop
