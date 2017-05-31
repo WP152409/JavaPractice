@@ -23,8 +23,9 @@ public class Movie {
 
     public void buyTicket(int age) throws Exception {
         if (age < limitAge) {
+            final int min = "가".charAt(0), max = "힣".charAt(0);
             final int last = getTitle().charAt(getTitle().length() - 1);
-            final String pp = ((last - "가".charAt(0)) % 28) > 0 ? "은" : "는";
+            final String pp = min <= last && last <= max && ((last - min) % 28) > 0 ? "은" : "는";
 
             throw new Exception(String.format("%s%s %d세 이상 관람가입니다.", getTitle(), pp, getLimitAge()));
         }
